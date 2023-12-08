@@ -1,0 +1,461 @@
+:root {
+    --main-color: #d7b94c;
+    --text-color: #fff;
+  }
+  /* End variables */
+  
+  /* Stert Global Rolls */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  a {
+    text-decoration: none; 
+  }
+  ul {
+    list-style: none;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 2rem; 
+  }
+  .h2 {
+    text-align: center; 
+    margin-bottom: 40px; 
+  }
+  .h2 span {
+    color: var(--main-color);
+  }
+  h1 span {
+    color: var(--main-color);
+  }
+  .container {
+    padding-inline: 80px;
+  }
+  header {
+    position: absolute; 
+    width: 100%; 
+    z-index: 2; 
+    box-shadow: 0px 3px 14px -3px rgba(0, 0, 0, 1);
+    background-color: white; 
+    position: sticky;
+    top: 0;
+  }
+  header .container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px 80px;
+    width: 100%; 
+    border-bottom: 2px solid var(--text-color); 
+  }
+  .logo {
+    width: 90px; 
+  }
+  header nav {
+    color: var(--main-color);
+  }
+  header nav ul{
+    display: flex;
+    align-items: center; 
+    gap: 0 30px; 
+  }  
+  header a {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 600; 
+  }
+  header a:hover {
+    color: var(--main-color);
+  } 
+  header a.active {
+    color: var(--main-color);
+    position: relative; 
+  }
+  header a.active::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    background-color: var(--main-color);
+    bottom: -15px;
+  }
+  .up {
+    position: fixed; 
+    right: 15px;
+    bottom: 15px;
+    color: var(--text-color); 
+    background-color: var(--main-color); 
+    border: none;
+    width: 30px;
+    height: 30px; 
+    padding: 3px; 
+    z-index: 2; 
+    display: none;
+    align-items: center;
+    justify-content: center; 
+  }
+  .up ion-icon {
+    font-size: 1.2rem;
+  }
+  .landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    text-align: center; 
+    background: url(background.jpeg) no-repeat;
+    background-size: cover;
+    padding: 0 80px; 
+    align-items: center; 
+    color: white; 
+    position: relative; 
+  }
+  .landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+  }
+  .landing .text {
+    position: relative; 
+  }
+  .landing .text p {
+    margin-bottom: 10px; 
+  }
+  .buy {
+    display: block;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    font-weight: 600; 
+    width: fit-content; 
+    border-radius: 8px; 
+    position: relative; 
+    font-size: 20px;
+  }
+  .landing .buy {
+    margin-inline: auto; 
+    margin-top: 30px; 
+  }
+  .landing .social {
+    display: flex;
+    gap: 0px 10px; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+  }
+  .landing .social img {
+    max-width: 30px; 
+  } 
+  .landing .social ion-icon {
+    transition: 0.3s;
+    font-size: 30px;  
+  }
+  .landing .social ion-icon:hover {
+    transform: translateY(-10px); 
+  }
+  .questions {
+    background-color: lightgoldenrodyellow; 
+    padding-block: 60px; 
+  }
+  .questions .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px 40px;
+  }
+  .questions img {
+    width: 200px;
+  }
+  .questions .text {
+    width: 600px; 
+  }
+  .questions .question {
+    margin-bottom: 1rem; 
+    position: relative; 
+  }
+  .questions .question::before {
+    content: "";
+    border-style: solid;
+    border-width: 30px;
+    right: -60px;
+    border-color: transparent transparent transparent var(--main-color);
+    position: absolute;
+  }
+  .questions .question .text {
+    display: grid;
+    grid-template-rows: 1fr 0;
+    overflow-Y: hidden;
+    transition: grid-template-rows 0.3s; 
+  }
+  .show {
+    grid-template-rows: 1fr 1fr !important;
+  }
+  .questions .question .text div {
+    background-color: #ddd; 
+    font-size: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+  }
+  .questions .question .text ion-icon {
+    color: var(--main-color);
+    font-size: 25px;
+  }
+  .questions p {
+    background-color: #eee; 
+    padding: 10px 20px;}
+    .main-blogs img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      max-width: 100%; 
+    }
+    .main-blogs {
+      padding-block: 60px; 
+    }
+    .main-blogs .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0px 40px;
+    }
+    .main-blogs .blog {
+      border-radius: 10px; 
+      box-shadow: 0px 3px 14px -3px rgba(0, 0, 0, 1);
+      transition: 0.3s;
+    }
+    .main-blogs .blog:hover {
+      transform: translateY(-20px); 
+    }
+    .main-blogs .blog .text {
+      padding: 20px; 
+    }
+    .main-blogs .blog .top {
+      display: flex; 
+      align-items: center;
+      color: #777;
+      margin-bottom: 10px; 
+      gap: 0 20px;
+    }
+    .main-blogs .blog .date,
+    .main-blogs .blog .learn {
+      display: flex;
+      align-items: center; 
+    }
+    .main-blogs .blog .top ion-icon {
+      color: var(--main-color);
+      margin-left: 5px; 
+    }
+    .main-blogs .blog h3 a {
+      display: block; 
+      color: black;
+      margin-bottom: 10px;  
+    }
+    .main-blogs .blog p {
+      color: #777;
+      margin-bottom: 30px; 
+    }
+    .main-blogs .blog .bottom {
+      display: flex;
+      align-items: center; 
+      position: relative; 
+    }
+    .main-blogs .blog .bottom::before {
+      content: "";
+      position: absolute;
+      width: calc(100% + 40px);
+      left: -20px;
+      top: -15px;
+      height: 1px;
+      background-color: #ddd; 
+    }
+    .main-blogs .blog .bottom img {
+      width: 40px;
+      border-radius: 50%;
+      height: 40px; 
+      margin-left: 20px; 
+    }
+    .testimonials {
+      padding-block: 60px; 
+      background-color: lightgoldenrodyellow; 
+    }
+    .testimonials .box {
+      padding-right: 30px; 
+      background-color: #fff; 
+      position: relative; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      height: 200px; 
+    } 
+    .testimonials .box::before {
+      content: ",,";
+      position: absolute;
+      top: -80px;
+      font-size: 150px;
+      left: 30px;
+      color: var(--main-color); 
+    }
+    .testimonials .box span {
+      display: block; 
+      margin-top: 5px;
+      margin-bottom: 1.3rem; 
+      color: #777;
+    }
+    .testimonials .box p {
+      color: #777;
+    }
+    .swiper {
+      color: black !important;
+    }
+    .swiper-wrapper {
+      margin-bottom: 100px; 
+    }
+    
+    .main {
+      height: calc(100vh - 200px); 
+      background: url(main.jpeg) no-repeat;
+      background-size: cover;
+      background-position: top;
+      color: white; 
+      display: flex;
+      position: relative; 
+      align-items: center; 
+    }
+    .main::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0 0 0 / 50%);
+    }
+    .main h1, 
+    .main p {
+      position: relative; 
+    } 
+    .main h1 {
+      font-size: 4rem; 
+    }
+    .blogs {
+      padding: 100px 0; 
+    }
+    .blogs .blog {
+      margin-bottom: 50px; 
+    }
+    .blogs .blog img {
+      margin-bottom: 25px; 
+    }
+    .blogs .blog h2 {
+      margin-bottom: 25px; 
+    }
+    .blogs .blog h2 a,
+    .blogs-read ul li a {
+      color: black;
+      transition: 0.3;
+    }
+    .blogs .blog h2 a::hover,
+    .blogs-read ul li a::hover {
+      color: var(--main-color);
+    }
+    .blogs .blog p {
+      margin-bottom: 25px; 
+    }
+    .blogs-read {
+      padding: 100px 0; 
+    }
+    .blogs-read h3 {
+      position: relative; 
+      margin-bottom: 50px; 
+      font-size: 30px; 
+    }
+    .blogs-read h3::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      bottom: -15px; 
+      background-color: var(--main-color); 
+    }
+    .blogs-read ul li {
+      position: relative;
+      font-size: 20px;
+      margin-bottom: 40px;
+      font-weight: 600; 
+    }
+    .blogs-read ul li:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #ccc; 
+      bottom: -20px;
+    }
+    .d {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 0 80px; 
+    }
+    
+    footer {
+      background-color: #000000; 
+    }
+    footer .container img {
+      width: 200px; 
+      margin-bottom: 1.5rem; 
+    }
+    footer .container {
+      color: white;
+      display: grid;
+      grid-template-columns: 35% 20% 20% 20%; 
+      padding-block: 50px; 
+      gap: 0px 40px;
+    }
+    footer h3 {
+      position: relative;
+      margin-bottom: 1.6rem; 
+    }
+    footer h3::before {
+      content: "";
+      position: absolute; 
+      width: 30px;
+      height: 3px;
+      background-color: var(--main-color);bottom: -5px; 
+    }
+    footer ul li {
+      margin-bottom: 15px;  
+      transition: 0.3s;
+    }
+    footer ul li:hover {
+      transform: translateX(-20px); 
+    } 
+    footer a {
+      color: white;
+      display: flex; 
+      align-items: center;
+      gap: 0 10px; 
+    }
+    footer ion-icon {
+      color: var(--main-color);
+    } 
+    footer .copy-right {
+      background-color: #1e1e2a; 
+      color: white;
+      text-align: center;
+      padding: 12px 0; 
+    }
+    footer .copy-right ion-icon {
+      color: var(--main-color)
+    }
